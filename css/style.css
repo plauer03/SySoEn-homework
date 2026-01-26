@@ -1,4 +1,4 @@
-/* Globale Stile */
+/* Globale Styles */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     color: #333;
 }
 
-/* Header Stile */
+/* Header Styles */
 header {
     background-color: #333;
     color: #fff;
@@ -37,7 +37,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* Main Stile */
+/* Main Styles */
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -48,7 +48,7 @@ section {
     margin-bottom: 2rem;
 }
 
-/* Footer Stile */
+/* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
