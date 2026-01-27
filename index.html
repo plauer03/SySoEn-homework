@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SySoEn</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Willkommen</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/page1.html">Über uns</a></li>
-                <li><a href="pages/page2.html">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section>
-            <h2>Inhaltsbereich</h2>
-            <p>Hier kommt dein Inhalt hin.</p>
-        </section>
-    </main>
+    <h1>Welcome to my Website</h1>
 
-    <footer>
-        <p>&copy; 2026</p>
-    </footer>
+    <nav>
+        <a href="page1.html">Page 1</a>
+        <a href="page2.html">Page 2</a>
+        <a href="page3.html">Page 3</a>
+    </nav>
 
-    <script src="js/script.js"></script>
+    <button onclick="showImage()">Show Image</button>
+
+    <br><br>
+    <img id="myImage" src="image.jpg" alt="Dummy Image">
+
+    <script src="script.js"></script>
 </body>
 </html>
