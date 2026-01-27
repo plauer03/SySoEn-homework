@@ -80,3 +80,10 @@ footer {
     height: 100%; 
     background-color: transparent;
 }
+
+.wappen
+{
+    position: absolute;
+    left:20%;
+    top:10px
+}
