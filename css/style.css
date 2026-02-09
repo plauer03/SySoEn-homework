@@ -13,7 +13,7 @@ body {
     background-image: url("https://www.muehlhausen-kraichgau.de/fileadmin/_migrated/pics/Brunnen_01.jpg"); /* Hintergrundbild */
     background-size: cover;        /* Bild füllt gesamte Breite */
     background-position: center;   /* Zentriert das Bild */
-    color: white;                  /* Weißer Text für Kontrast */
+    color: rgb(168, 12, 12);                  /* Weißer Text für Kontrast */
     text-align: center;
     padding: 100px 20px;           /* Macht den Bereich schön hoch */
 }
