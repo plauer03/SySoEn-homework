@@ -1,72 +1,138 @@
+/* Grundlayout der Seite */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Linux Libertine", Georgia, serif; /* Wikipedia-ähnliche Schrift */
     margin: 0;
-    background-color: #f2f5f7;
-    color: #333;
+    background-color: #f8f9fa;
+    color: #202122;
 }
 
-header {
-    background: linear-gradient(135deg, #2e7d32, #66bb6a);
-    color: white;
+/* Kopfbereich oben */
+/* Großer Kopfbereich mit Hintergrundbild */
+.site-header {
+    position: relative; /* Damit Text über dem Bild liegen kann */
+    background-image: url("https://www.muehlhausen-kraichgau.de/fileadmin/_migrated/pics/Brunnen_01.jpg"); /* Hintergrundbild */
+    background-size: cover;        /* Bild füllt gesamte Breite */
+    background-position: center;   /* Zentriert das Bild */
+    color: white;                  /* Weißer Text für Kontrast */
     text-align: center;
-    padding: 30px 15px;
+    padding: 100px 20px;           /* Macht den Bereich schön hoch */
 }
 
-nav {
-    background-color: #1b5e20;
-    text-align: center;
-    padding: 10px 0;
+/* Abdunklung über dem Bild für bessere Lesbarkeit */
+.site-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45); /* Dunkler Overlay */
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-    padding: 6px 10px;
-    border-radius: 4px;
+/* Damit Text über dem Overlay bleibt */
+.site-header h1,
+.site-header p {
+    position: relative;
+    z-index: 1;
 }
 
-nav a:hover,
-nav a.active {
-    background-color: #66bb6a;
-    color: #1b5e20;
+/* Großer Titel */
+.site-header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    letter-spacing: 2px;
 }
 
-main {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 15px;
-}
-
-.card {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-.content-image {
-    width: 100%;
-    border-radius: 6px;
+/* Untertitel */
+.site-header p {
+    font-size: 1.2em;
     margin-top: 10px;
 }
 
-.img-caption {
-    font-size: 0.9em;
-    color: #666;
-    margin-top: 5px;
-}
 
-ul {
-    padding-left: 20px;
-}
-
-footer {
+/* Navigationsleiste */
+.navbar {
+    background-color: #eaecf0;
+    padding: 10px;
     text-align: center;
-    padding: 15px;
-    background-color: #1b5e20;
-    color: white;
+    border-bottom: 1px solid #a2a9b1;
+}
+
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #0645ad;
+    font-weight: bold;
+}
+
+.navbar a.active {
+    text-decoration: underline;
+}
+
+/* Layout: Seitenleiste + Inhalt */
+.layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+/* Infobox links */
+.infobox {
+    width: 260px;
+    background-color: #ffffff;
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+    margin-right: 20px;
+    font-size: 0.9em;
+}
+
+.infobox img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Tabelle in der Infobox */
+.infobox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.infobox th {
+    text-align: left;
+    background-color: #eaecf0;
+    padding: 4px;
+}
+
+.infobox td {
+    padding: 4px;
+}
+
+/* Hauptinhalt */
+.content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #a2a9b1;
+}
+
+/* Abschnittsüberschriften */
+.content h2 {
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 4px;
+    margin-top: 30px;
+}
+
+/* Listen */
+ul {
+    margin-left: 20px;
+}
+
+/* Fußbereich */
+.site-footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #54595d;
+    padding: 20px;
     margin-top: 40px;
 }
