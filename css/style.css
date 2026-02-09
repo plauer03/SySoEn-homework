@@ -1,138 +1,155 @@
-/* Grundlayout der Seite */
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: "Linux Libertine", Georgia, serif; /* Wikipedia-ähnliche Schrift */
-    margin: 0;
-    background-color: #f8f9fa;
-    color: #202122;
+    font-family: Inter, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
 }
 
-/* Kopfbereich oben */
-/* Großer Kopfbereich mit Hintergrundbild */
-.site-header {
-    position: relative; /* Damit Text über dem Bild liegen kann */
-    background-image: url("https://www.muehlhausen-kraichgau.de/fileadmin/_migrated/pics/Brunnen_01.jpg"); /* Hintergrundbild */
-    background-size: cover;        /* Bild füllt gesamte Breite */
-    background-position: center;   /* Zentriert das Bild */
-    color: rgb(168, 12, 12);                  /* Weißer Text für Kontrast */
-    text-align: center;
-    padding: 100px 20px;           /* Macht den Bereich schön hoch */
-}
-
-/* Abdunklung über dem Bild für bessere Lesbarkeit */
-.site-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.45); /* Dunkler Overlay */
-}
-
-/* Damit Text über dem Overlay bleibt */
-.site-header h1,
-.site-header p {
+/* ================= HEADER (gemeinsam) ================= */
+header {
+    color: #000000;
+    padding: 1rem;
     position: relative;
-    z-index: 1;
 }
 
-/* Großer Titel */
-.site-header h1 {
-    font-size: 3.5em;
-    margin: 0;
-    letter-spacing: 2px;
+header h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 
-/* Untertitel */
-.site-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
+/* ================= NAVIGATION ================= */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
 }
 
-
-/* Navigationsleiste */
-.navbar {
-    background-color: #eaecf0;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #a2a9b1;
-}
-
-.navbar a {
-    margin: 0 15px;
+nav a {
+    color: #000000;
     text-decoration: none;
-    color: #0645ad;
-    font-weight: bold;
 }
 
-.navbar a.active {
+nav a:hover {
     text-decoration: underline;
 }
 
-/* Layout: Seitenleiste + Inhalt */
-.layout {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 10px;
+.menu-point:hover {
+    font-weight: bold;
 }
 
-/* Infobox links */
-.infobox {
-    width: 260px;
-    background-color: #ffffff;
-    border: 1px solid #a2a9b1;
-    padding: 10px;
-    margin-right: 20px;
-    font-size: 0.9em;
+.active {
+    font-weight: bold;
+    text-decoration: underline;
 }
 
-.infobox img {
-    width: 100%;
-    margin-bottom: 10px;
+/* ================= WAPPEN ================= */
+.wappen {
+    position: absolute;
+    right: 1.5%;
+    top: 3%;
 }
 
-/* Tabelle in der Infobox */
-.infobox table {
-    width: 100%;
-    border-collapse: collapse;
+/* ================= STERNENFELS HEADER ================= */
+.S_Header {
+    background-image: 
+        linear-gradient(to top, #fff 0%, rgba(51, 51, 51, 0) 100%),    
+        url('https://www.sternle-am-schlossbergturm.de/images/Luftbild-Natur-Sonne-Wolken-Sternenfels-Turm-Luftaufnahme-2000x1200.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
 }
 
-.infobox th {
-    text-align: left;
-    background-color: #eaecf0;
-    padding: 4px;
+.S_Header h1 {
+    color: #dfaa0a;
 }
 
-.infobox td {
-    padding: 4px;
+/* ================= RETTIGHEIM HEADER ================= */
+.R_Header {
+    background-image: 
+        linear-gradient(to top, #fff 0%, rgba(51, 51, 51, 0) 100%),    
+        url('https://www.muehlhausen-kraichgau.de/fileadmin/Dateien/Bilder/Contentseite_1842x589px/18.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+    height: 280px;              /* ← Höhe des Headers */
+    display: flex;              /* sorgt für zentrierten Inhalt */
+    flex-direction: column;
+    justify-content: center;    /* Text vertikal zentrieren */
 }
 
-/* Hauptinhalt */
-.content {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #a2a9b1;
+.R_Header h1 {
+    color: #2e8b57;
+    font-size: 3rem;
 }
 
-/* Abschnittsüberschriften */
-.content h2 {
-    border-bottom: 1px solid #a2a9b1;
-    padding-bottom: 4px;
-    margin-top: 30px;
-}
-
-/* Listen */
-ul {
-    margin-left: 20px;
-}
-
-/* Fußbereich */
-.site-footer {
+/* ================= BUTTON ZURÜCK ================= */
+.back_button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4b4e55, #252626);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 50px;
+    height: 20px;
+    line-height: 16px;
     text-align: center;
-    font-size: 0.9em;
-    color: #54595d;
-    padding: 20px;
-    margin-top: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.25s ease;
+}
+
+.back_button:hover {
+    transform: translateY(-2px);
+}
+
+/* ================= INFO PAGE ================= */
+.info-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.info-page section {
+    margin-bottom: 60px;
+}
+
+.info-page h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #2e8b57;
+}
+
+.info-page p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.info-img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.info-img:hover {
+    transform: scale(1.02);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }

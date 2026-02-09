@@ -2,94 +2,63 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Rettigheim – Wikipedia-ähnliche Infoseite</title>
-
-    <!-- Verknüpfung zur externen CSS-Datei -->
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rettigheim</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
+
+<header class="R_Header">    
+    <h1>Rettigheim</h1>
+    <nav>
+        <ul>
+            <li><a class="back_button" href="../index.html">🏠</a></li>
+            <li><a class="menu-point" href="page1.html">Sternenfels</a></li>
+            <li><a class="menu-point active">Rettigheim</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
 <body>
 
-    <!-- Kopfbereich der Seite -->
-    <header class="site-header">
-        <h1>Rettigheim</h1>
-    </header>
+    <!-- Wappen Rettigheim -->
+    <img class="wappen" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Wappen_Rettigheim.svg" style="width:200px;">
 
-    <!-- Navigationsleiste -->
-    <nav class="navbar">
-        <a href="index.html">Startseite</a>
-        <a href="page1.html">Geschichte</a>
-        <a href="page2.html" class="active">Rettigheim</a>
-        <a href="page3.html">Medien</a>
-    </nav>
+    <main class="info-page">
 
-    <!-- Hauptlayout mit Seitenleiste + Inhalt -->
-    <div class="layout">
+        <section>
+            <h2>🏡 Ortsbild</h2>
+            <p>
+                Rettigheim ist ein ruhiger Ortsteil von Mühlhausen im Rhein-Neckar-Kreis. Der Ort ist geprägt
+                von ländlicher Struktur, traditionellen Häusern und viel Natur in der Umgebung.
+            </p>
+            <img src="https://picsum.photos/1200/500?village" class="info-img" alt="Rettigheim Ortsbild">
+        </section>
 
-        <!-- Seitenleiste (Infobox wie bei Wikipedia) -->
-        <aside class="infobox">
-            <h2>Rettigheim</h2>
-            <img src="https://picsum.photos/300/200?random=2" alt="Rettigheim Bild">
-            <table>
-                <tr><th>Postleitzahl</th><td>69242</td></tr>
-                <tr><th>Gemeinde</th><td>Mühlhausen</td></tr>
-                <tr><th>Landkreis</th><td>Rhein-Neckar-Kreis</td></tr>
-                <tr><th>Bundesland</th><td>Baden-Württemberg</td></tr>
-                <tr><th>Region</th><td>Metropolregion Rhein-Neckar</td></tr>
-            </table>
-        </aside>
+        <section>
+            <h2>⛪ Geschichte & Kirche</h2>
+            <p>
+                Die Geschichte Rettigheims reicht viele Jahrhunderte zurück. Besonders das kirchliche Leben
+                prägt bis heute die Dorfgemeinschaft.
+            </p>
+            <img src="https://picsum.photos/1200/500?church" class="info-img" alt="Kirche in Rettigheim">
+        </section>
 
-        <!-- Hauptinhalt -->
-        <main class="content">
+        <section>
+            <h2>🌾 Natur & Umgebung</h2>
+            <p>
+                Die Umgebung bietet viele Möglichkeiten für Spaziergänge und Radtouren durch die Kraichgauer
+                Hügellandschaft. Landwirtschaft und Natur bestimmen das Landschaftsbild.
+            </p>
+            <img src="https://picsum.photos/1200/500?fields" class="info-img" alt="Natur rund um Rettigheim">
+        </section>
 
-            <!-- Abschnitt: Überblick -->
-            <section>
-                <h2>Überblick</h2>
-                <p>
-                    Rettigheim ist ein Ortsteil der Gemeinde Mühlhausen im Rhein-Neckar-Kreis. 
-                    Der Ort liegt zwischen Heidelberg, Wiesloch und Sinsheim und ist geprägt von 
-                    ländlicher Umgebung, Feldern und Weinbergen.
-                </p>
-            </section>
+    </main>
 
-            <!-- Abschnitt: Geografie -->
-            <section>
-                <h2>Geografie</h2>
-                <p>
-                    Rettigheim liegt in der Oberrheinischen Tiefebene und gehört zur Metropolregion Rhein-Neckar. 
-                    Die Umgebung bietet zahlreiche Möglichkeiten zum Wandern und Radfahren.
-                </p>
-            </section>
-
-            <!-- Abschnitt: Freizeit -->
-            <section>
-                <h2>Freizeit und Umgebung</h2>
-                <ul>
-                    <li>Radwege durch Felder und Weinberge</li>
-                    <li>Vereinsleben und Dorffeste</li>
-                    <li>Nahegelegene Städte: Heidelberg, Wiesloch, Walldorf</li>
-                </ul>
-            </section>
-
-            <!-- Abschnitt: Karte -->
-            <section>
-                <h2>Lage</h2>
-                <iframe 
-                    src="https://www.google.com/maps?q=Rettigheim+M%C3%BChlhausen&output=embed"
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </section>
-
-        </main>
-    </div>
-
-    <!-- Fußbereich -->
-    <footer class="site-footer">
-        <p>© 2026 Rettigheim Infoseite</p>
+    <footer>
+        © 2026 Rettigheim
     </footer>
 
+    <script src="../js/script.js"></script>
 </body>
 </html>
