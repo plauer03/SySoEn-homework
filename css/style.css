@@ -1,25 +1,72 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #f2f5f7;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+nav {
+    background-color: #1b5e20;
+    text-align: center;
+    padding: 10px 0;
 }
 
 nav a {
-    margin-right: 15px;
+    color: white;
     text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 4px;
 }
 
-button {
-    padding: 10px 15px;
-    font-size: 16px;
+nav a:hover,
+nav a.active {
+    background-color: #66bb6a;
+    color: #1b5e20;
 }
 
-#myImage {
-    display: none;
-    width: 300px;
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .content-image {
-    width: 300px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.img-caption {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 5px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1b5e20;
+    color: white;
+    margin-top: 40px;
 }
