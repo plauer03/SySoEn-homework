@@ -22,3 +22,8 @@ function start_exploring() {
 function learn_more() {
     alert("Learn More wurde geklickt!");
 }
+
+function showImage() {
+    const img = document.getElementById("myImage");
+    img.style.display = "block";
+}
