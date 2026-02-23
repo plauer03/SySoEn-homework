@@ -1,4 +1,6 @@
-/* --- GLOBALE CONFIG --- */
+/* =========================================================
+   1. GLOBALE CONFIG & RESET
+   ========================================================= */
 :root {
     --background: #ffffff;
     --foreground: #000000;
@@ -21,84 +23,84 @@ body {
     color: var(--foreground);
 }
 
-/* --- HERO SECTION (Großes Bild) --- */
+/* =========================================================
+   2. LANDING PAGE (INDEX.HTML)
+   ========================================================= */
+/* --- Hero Section --- */
 .hero {
-    height: 100vh; /* 60% der Bildschirmhöhe */
-    /* Du musst ein Bild in deinen img Ordner legen! */
-    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1723479812089-9f74276cf29d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc3RyZWV0cyUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3Njk0NDMwNTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');
+    height: 100vh;
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1723479812089-9f74276cf29d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc3RyZWV0cyUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3Njk0NDMwNTl8MA&ixlib=rb-4.1.0&q=80&w=1080');
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* prevent select */
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.hero-sign{
+.hero-sign {
     font-size: 16px;
-    border: #111;
-    padding: 5px 15px 5px 15px;
+    padding: 5px 15px;
     color: #fff;
-    background-color: rgb(150,150,150,0.4);
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0.341);
+    background-color: rgba(150,150,150,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.34);
     border-radius: 15px;
 }
 
-.hero-btn1{
+.hero-btn1 {
     margin: 25px 5px 0px 0px;
     font-size: 18px;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 25px;
     color: #111;
     background-color: #fff;
-    border-width: 1px;
     border: none;
-    border-color: #fff;
     border-radius: 25px;
-}
-.hero-btn1:hover{
-    size: 10;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-.hero-btn2{
+.hero-btn1:hover {
+    transform: scale(1.05);
+}
+
+.hero-btn2 {
     margin: 25px 0px 0px 5px;
     font-size: 18px;
-    border: #111;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 25px;
     color: #fff;
-    background-color: rgb(150,150,150,0.4);
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(255, 255, 255, 0.341);
+    background-color: rgba(150,150,150,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.34);
     border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.hero-btn2:hover {
+    transform: scale(1.05);
 }
 
 .hero-p1 {
     color: #fff;
 }
 
-/* HERO h1 ist erste Überschrift "explore your"*/
 .hero-h1 {
     color: #fff;
     margin-bottom: -30px;
     font-size: 4rem;
 }
 
-/* HERO h1 ist zweite Überschrift "local cities"*/
 .hero-h2 {
     color: var(--heroh2);
     font-size: 4rem;
     margin-bottom: 0.5rem;
 }
 
-/* --- SWIPE KARTEN --- */
-.orte-bereich{
-    height: 100vh; /* 60% der Bildschirmhöhe */
+/* --- Swipe Karten Bereich --- */
+.orte-bereich {
+    height: 100vh;
 }
 
 .orte-bereich h2 {
@@ -107,7 +109,8 @@ body {
     font-size: 35px;
     margin-bottom: -5px;
 }
-.orte-bereich p{
+
+.orte-bereich p {
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -118,38 +121,36 @@ body {
     gap: 20px;
     padding: 20px;
     scroll-snap-type: x mandatory; 
-    
-    /* NEU: Zentriert die Karten, wenn sie auf den Schirm passen */
     justify-content: center; 
 }
 
 .karten-scroller::-webkit-scrollbar { display: none; }
 
 .karte {
-    min-width: 300px; /* Feste Breite */
+    min-width: 300px;
     height: 550px;
     background-color: transparent;
     border-radius: 15px;
     overflow: hidden;
     text-decoration: none;
     color: var(--foreground);
-    scroll-snap-align: center; /* Hier rastet es ein */
+    scroll-snap-align: center;
     transition: transform 0.3s;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .karte:hover {
-    transform: scale(1.05); /* Zoom beim Drüberfahren */
+    transform: scale(1.05);
 }
 
 .karte-bild {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-color: #555; /* Fallback Farbe */
+    background-color: #555;
 }
 
-.karte-icon{
+.karte-icon {
     margin-top: 80%;
     margin-left: 15px;
     padding: 15px;
@@ -159,56 +160,26 @@ body {
     border-radius: 100px;
 }
 
-.karte-content{
+.karte-content {
     margin-top: 10px;
     color: #fff;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0 15px;
 }
-.karte-content h3{
+
+.karte-content h3 {
     font-size: 25px;
 }
-.karte-content p{
+
+.karte-content p {
     font-size: 18px;
     text-align: left;
     color: #bbb;
-
-}
-/* --- FOOTER --- */
-footer {
-    background-color: rgba(0,0,0,0.8);
-    color: #bbb;
-    text-align: center;
-    padding: 2rem;
-}
-/*Styles of containers in subpages---------------------------------------------------------*/
-/*Header & Top related*/
-.wappen
-{
-    position: absolute;
-    right:1.5%;
-    top:3%;
 }
 
-.S_Header
-{
-    background-color: transparent;
-    background-image: 
-        linear-gradient(to top, #fff 0%, rgba(51, 51, 51, 0) 100%),    
-        url('https://www.sternle-am-schlossbergturm.de/images/Luftbild-Natur-Sonne-Wolken-Sternenfels-Turm-Luftaufnahme-2000x1200.jpeg');
-    filter: grayscale(20%); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    color: white;
-}
-
-.S_Header h1
-{
-    color:#dfaa0a;
-    font-weight: bolder;
-}
-
+/* =========================================================
+   3. GETEILTE KOMPONENTEN FÜR UNTERSEITEN (Subpages)
+   ========================================================= */
+/* --- Navigation & Buttons --- */
 .back_button {
     display: inline-block;
     background: linear-gradient(135deg, #4b4e55, #252626);
@@ -223,8 +194,6 @@ footer {
     height: 20px;
     line-height: 16px;
     text-align: center;
-    filter:grayscale(100%)
-
 }
 
 .back_button:hover {
@@ -233,69 +202,214 @@ footer {
     background: linear-gradient(135deg, #b9b7ba, #666667);
 }
 
-.back_button:active {
-    transform: translateY(0);
-    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-}
-
-.menu-point:hover
-{
-    font-weight: bold;
+.menu-point {
+    color: white;
     text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
 }
 
-/*Activity related*/
-.activity img
-{
+.menu-point:hover,
+.menu-point.active {
+    color: var(--heroh2);
+    font-weight: bold;
+}
+
+/* --- Widgets (Wetter & Karte) --- */
+.wrap_horiz {
+    max-width: 1200px;
+    margin: 4rem auto 5rem auto;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+.weather-container, .map-container {
+    flex: 1;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.widget-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.weather-frame, .map-frame {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease;
+}
+
+.weather-frame:hover, .map-frame:hover {
+    transform: translateY(-2px);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: rgba(0,0,0,0.8);
+    color: #bbb;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+/* =========================================================
+   4. PAGE 1: STERNENFELS
+   ========================================================= */
+.S_Header {
+    background-color: transparent;
+    background-image: 
+        linear-gradient(to top, #fff 0%, rgba(51, 51, 51, 0) 100%),    
+        url('https://www.sternle-am-schlossbergturm.de/images/Luftbild-Natur-Sonne-Wolken-Sternenfels-Turm-Luftaufnahme-2000x1200.jpeg');
+    filter: grayscale(20%); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white;
+    padding: 2rem; /* Platzhalter, falls kein festes Height gesetzt war */
+}
+
+.S_Header h1 {
+    color: #dfaa0a;
+    font-weight: bolder;
+}
+
+.activity img {
     border-radius: 8px;
     transition: all 0.25s ease;
     box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    width: 800px;
-    height:400px;
-}
-
-.activity img:hover
-{
-    transform: translateY(-2px);
-}
-
-.activities h2
-{
-    position:relative;
-    left:1%;
-}
-
-
-/*-----------------------Footer related---------------------------------*/
-.wrap_horiz {
-    display: flex;
-    align-items: flex-end;          /* beide am unteren Rand ausrichten */
     width: 100%;
-    margin-top: 50px;               /* Abstand zum Inhalt darüber */
-    justify-content: space-evenly;
+    max-width: 800px;
+    height: auto; /* Besser für Responsiveness als feste 400px */
 }
 
-.map-frame
-{
-    border-radius: 20px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    width: 800px;
-    height:180px;
-}
-
-.weather-frame
-{
-    border-radius: 20px;
-    width: 800px;
-    height:180px;
-    border: none;  
-    background-color: transparent;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-    transition: all 0.25s ease;
-}
-
-.weather-frame:hover
-{
+.activity img:hover {
     transform: translateY(-2px);
-    filter:grayscale(75%);
+}
+
+.activities h2 {
+    position: relative;
+    left: 1%;
+}
+
+/* =========================================================
+   5. PAGE 2: RETTIGHEIM
+   ========================================================= */
+.R_Header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), 
+                url('https://upload.wikimedia.org/wikipedia/commons/f/f8/Von_Malsch_Blick_auf_Rettigheim.JPG') center/cover no-repeat;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.R_Header h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--heroh2);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: bold;
+}
+
+.R_Header nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+}
+
+.wappen {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px !important; 
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+}
+/* --- Content Alternating Grid Layout (FIXED) --- */
+.info-page {
+    max-width: 1200px; 
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; 
+}
+
+/* Wir nutzen Grid für saubere Spalten */
+.info-page section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Zwei exakt gleich große Spalten */
+    gap: 1rem 4rem; /* 1rem Platz unter dem Titel, 4rem Platz zwischen Text und Bild */
+    background: #fdfdfd;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    align-items: center; /* Zentriert das Bild vertikal */
+}
+
+/* 1. Ungerade Sektionen (Titel & Text links, Bild rechts) */
+.info-page section h2 {
+    grid-column: 1 / 2;
+    grid-row: 1; /* Erste Zeile */
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.info-page section p {
+    grid-column: 1 / 2;
+    grid-row: 2; /* Zweite Zeile, direkt unter dem Titel */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+.info-img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3; /* Das Bild nimmt beide Zeilen (Titel + Text) in der Höhe ein */
+    width: 100%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover; 
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    justify-self: center; /* Zentriert das Bild horizontal in seiner Spalte */
+}
+
+/* 2. Gerade Sektionen (Bild links, Titel & Text rechts) */
+.info-page section:nth-child(even) h2,
+.info-page section:nth-child(even) p {
+    grid-column: 2 / 3; /* Schiebt Titel und Text in die rechte Spalte */
+}
+
+.info-page section:nth-child(even) .info-img {
+    grid-column: 1 / 2; /* Schiebt das Bild in die linke Spalte */
+}
+
+.info-img:hover {
+    transform: translateY(-5px);
 }
