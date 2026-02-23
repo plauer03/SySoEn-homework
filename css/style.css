@@ -96,6 +96,76 @@ body {
     margin-bottom: 0.5rem;
 }
 
+.menu-point:hover {
+    font-weight: bold;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ================= WAPPEN ================= */
+.wappen {
+    position: absolute;
+    right: 1.5%;
+    top: 3%;
+}
+
+/* ================= STERNENFELS HEADER ================= */
+.S_Header {
+    background-image: 
+        linear-gradient(to top, #fff 0%, rgba(51, 51, 51, 0) 100%),    
+        url('https://www.sternle-am-schlossbergturm.de/images/Luftbild-Natur-Sonne-Wolken-Sternenfels-Turm-Luftaufnahme-2000x1200.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.S_Header h1 {
+    color: #dfaa0a;
+}
+
+/* ================= RETTIGHEIM HEADER ================= */
+.R_Header {
+    background-image: 
+        linear-gradient(to top, #fff 0%, rgba(51, 51, 51, 0) 100%),    
+        url('https://www.muehlhausen-kraichgau.de/fileadmin/Dateien/Bilder/Contentseite_1842x589px/18.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+    height: 280px;              /* ← Höhe des Headers */
+    display: flex;              /* sorgt für zentrierten Inhalt */
+    flex-direction: column;
+    justify-content: center;    /* Text vertikal zentrieren */
+}
+
+.R_Header h1 {
+    color: #2e8b57;
+    font-size: 3rem;
+}
+
+/* ================= BUTTON ZURÜCK ================= */
+.back_button {
+    display: inline-block;
+    background: linear-gradient(135deg, #4b4e55, #252626);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 50px;
+    height: 20px;
+    line-height: 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.25s ease;
+}
+
+.back_button:hover {
+    transform: translateY(-2px);
 /* --- SWIPE KARTEN --- */
 .orte-bereich{
     height: 100vh; /* 60% der Bildschirmhöhe */
@@ -107,11 +177,96 @@ body {
     font-size: 35px;
     margin-bottom: -5px;
 }
+
+/* ================= INFO PAGE ================= */
+.info-page {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.info-page section {
+    margin-bottom: 20px;
+}
+
+.info-page h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #2e8b57;
+}
+
+.info-page p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.info-img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+}
+
+.info-img:hover {
+    transform: scale(1.02);
 .orte-bereich p{
     text-align: center;
     margin-bottom: 2rem;
 }
 
+/* ================= WETTER & KARTE BEREICH ================= */
+.wrap_horiz {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap; /* Für Handy-Ansicht */
+}
+
+.weather-container,
+.map-container {
+    flex: 1 1 500px; /* flexibel, aber Mindestbreite */
+    background: #f5f5f5;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.weather-frame,
+.map-frame {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Überschriften optional */
+.widget-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #2e8b57;
+}
+
+/* Mobile Anpassung */
+@media (max-width: 768px) {
+    .weather-frame,
+    .map-frame {
+        height: 220px;
+    }
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+    background-color: #333;
 .karten-scroller {
     display: flex;
     overflow-x: auto; 
