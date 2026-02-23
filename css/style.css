@@ -82,12 +82,14 @@ body {
     color: #fff;
 }
 
+/* HERO h1 ist erste Überschrift "explore your"*/
 .hero-h1 {
     color: #fff;
     margin-bottom: -30px;
     font-size: 4rem;
 }
 
+/* HERO h1 ist zweite Überschrift "local cities"*/
 .hero-h2 {
     color: var(--heroh2);
     font-size: 4rem;
