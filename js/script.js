@@ -1,9 +1,3 @@
-function showImage() {
-    const img = document.getElementById("myImage");
-    img.style.display = "block";
-}
-
-
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Seite geladen');
 
