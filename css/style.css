@@ -1,58 +1,183 @@
-/* Globale Styles */
+/* --- GLOBALE CONFIG --- */
+:root {
+    --background: #ffffff;
+    --foreground: #000000;
+    --textcolor: #111;
+    --card-bg: #3d3d3d;
+    --heroh2: #dfaa0a;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: 100;
 }
 
 body {
-    font-family: Inter, sans-serif;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    background-color: var(--background);
+    color: var(--foreground);
 }
 
-/* Header Styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-}
-
-header h1 {
-    margin-bottom: 1rem;
-}
-
-nav ul {
-    list-style: none;
+/* --- HERO SECTION (Großes Bild) --- */
+.hero {
+    height: 100vh; /* 60% der Bildschirmhöhe */
+    /* Du musst ein Bild in deinen img Ordner legen! */
+    background-image: linear-gradient(rgba(255,255,255,0.2), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1723479812089-9f74276cf29d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXR5JTIwc3RyZWV0cyUyMGFyY2hpdGVjdHVyZXxlbnwxfHx8fDE3Njk0NDMwNTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* prevent select */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
-nav a {
+.hero-sign{
+    font-size: 16px;
+    border: #111;
+    padding: 5px 15px 5px 15px;
     color: #fff;
-    text-decoration: none;
+    background-color: rgb(150,150,150,0.4);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.341);
+    border-radius: 15px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.hero-btn1{
+    margin: 25px 5px 0px 0px;
+    font-size: 18px;
+    padding: 15px 25px 15px 25px;
+    color: #111;
+    background-color: #fff;
+    border-width: 1px;
+    border: none;
+    border-color: #fff;
+    border-radius: 25px;
+}
+.hero-btn1:hover{
+    size: 10;
 }
 
-/* Main Styles */
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+.hero-btn2{
+    margin: 25px 0px 0px 5px;
+    font-size: 18px;
+    border: #111;
+    padding: 15px 25px 15px 25px;
+    color: #fff;
+    background-color: rgb(150,150,150,0.4);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.341);
+    border-radius: 25px;
 }
 
-section {
+.hero-p1 {
+    color: #fff;
+}
+
+/* HERO h1 ist erste Überschrift "explore your"*/
+.hero-h1 {
+    color: #fff;
+    margin-bottom: -30px;
+    font-size: 4rem;
+}
+
+/* HERO h1 ist zweite Überschrift "local cities"*/
+.hero-h2 {
+    color: var(--heroh2);
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- SWIPE KARTEN --- */
+.orte-bereich{
+    height: 100vh; /* 60% der Bildschirmhöhe */
+}
+
+.orte-bereich h2 {
+    padding-top: 2rem;    
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: -5px;
+}
+.orte-bereich p{
+    text-align: center;
     margin-bottom: 2rem;
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
+.karten-scroller {
+    display: flex;
+    overflow-x: auto; 
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory; 
+    
+    /* NEU: Zentriert die Karten, wenn sie auf den Schirm passen */
+    justify-content: center; 
+}
+
+.karten-scroller::-webkit-scrollbar { display: none; }
+
+.karte {
+    min-width: 300px; /* Feste Breite */
+    height: 550px;
+    background-color: transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--foreground);
+    scroll-snap-align: center; /* Hier rastet es ein */
+    transition: transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.karte:hover {
+    transform: scale(1.05); /* Zoom beim Drüberfahren */
+}
+
+.karte-bild {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: #555; /* Fallback Farbe */
+}
+
+.karte-icon{
+    margin-top: 80%;
+    margin-left: 15px;
+    padding: 15px;
+    border: none;
+    color: rgba(255, 185, 0);
+    background-color: rgba(255, 187, 0, 0.174);
+    border-radius: 100px;
+}
+
+.karte-content{
+    margin-top: 10px;
     color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.karte-content h3{
+    font-size: 25px;
+}
+.karte-content p{
+    font-size: 18px;
+    text-align: left;
+    color: #bbb;
+
+}
+/* --- FOOTER --- */
+footer {
+    background-color: rgba(0,0,0,0.8);
+    color: #bbb;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 2rem;
 }

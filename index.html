@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SySoEn</title>
+    <title>Explore Local Cities</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Willkommen</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/page1.html">Über uns</a></li>
-                <li><a href="pages/page2.html">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-
     <main>
-        <section>
-            <h2>Inhaltsbereich</h2>
-            <p>Hier kommt dein Inhalt hin.</p>
+        <section class="hero">
+            <div class="hero-text">
+                <span class="hero-sign" onclick="alert('test')">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-dummy"></i>
+                    discover your neighborhood
+                </span>
+                <h1 class="hero-h1">explore your</h1>
+                <h1 class="hero-h2">local cities</h1>
+                <p class="hero-p1">uncover hidden gems, vibrant cultures and unforgettable <br> 
+                    experiences right in your backyard
+                </p>
+                <span>
+                    <button id="startBtn" class="hero-btn1">start exploring</button>
+                    <button id="learnBtn" class="hero-btn2">learn more</button>
+                </span>
+            </div>
+        </section>
+
+        <section class="orte-bereich">
+            <h2>what you'll discover</h2>
+            <p>every corner of your city holds a story waiting to be told</p>
+            
+            <div class="karten-scroller">
+                
+                <a href="pages/page1.html" class="karte">
+                    <div class="karte-bild" style="background-image: linear-gradient(rgba(255, 255, 255, 0.073), rgba(0,0,0,1)), url('img/sternfels.png');">
+                        <i class="fa-regular fa-compass karte-icon"></i>
+                        <div class="karte-content">
+                            <h3>Sternfels</h3>
+                            <p>navigate through secret locations only locals know about</p>
+                        </div>
+                    </div>
+
+                </a>
+
+                <a href="pages/page2.html" class="karte">
+                    <div class="karte-bild" style="background-image: linear-gradient(rgba(255, 255, 255, 0.073), rgba(0,0,0,1)), url('img/rettigheim.png');">
+                        <i class="fa-regular fa-compass karte-icon"></i>
+                        <div class="karte-content">
+                            <h3>Rettigheim</h3>
+                            <p>navigate through secret locations only locals know about</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="karte">
+                    <div class="karte-bild" style="background-image: linear-gradient(rgba(255, 255, 255, 0.073), rgba(0,0,0,1)), url('img/sandweier.png');">
+                        <i class="fa-regular fa-compass karte-icon"></i>
+                        <div class="karte-content">
+                            <h3>Sandweier</h3>
+                            <p>navigate through secret locations only locals know about</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026</p>
+        <p>&copy; 2026 explore local cities - made with ❤️</p>
     </footer>
-
-    <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
